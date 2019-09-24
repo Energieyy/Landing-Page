@@ -30,6 +30,7 @@ It is a practical and helpful Home Page for your Browser
 
 ## How to use
 
+- It all have to be in the same folder
 - Open the index.html file in your main browser
 - copy the URL
 - go to settings

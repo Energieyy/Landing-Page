@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Welcome</title>
+    <link rel="shortcut icon" href="images/sun.png" id="icon" />
+    <link rel="stylesheet" href="animation.css" />
+  </head>
+  <body id="body">
+    <div id="main">
+      <h1 id="headline">Welcome</h1>
+      <input type="text" placeholder="" id="name" class="input" />
+      <br />
+      <input
+        type="text"
+        placeholder="search on Ecosia"
+        id="ecosia"
+        class="input"
+      />
+      <br />
+      <input
+        type="text"
+        placeholder="search on YouTube"
+        id="youtube"
+        class="input"
+      />
+      <br />
+      <input
+        type="text"
+        placeholder="search on Amazon"
+        id="amazon"
+        class="input"
+      />
+      <br />
+      <h1 id="zahlout">You searched 0 things</h1>
+      <h1 id="uhr">15:50:50</h1>
+    </div>
+
+    <div id="menü">
+      <div id="menülistbtns">
+        <button id="btnT">
+          Todos?
+        </button>
+        <br />
+        <button id="btnS">
+          Things to buy?
+        </button>
+        <br />
+        <button id="btnR">
+          Saved pages?
+        </button>
+      </div>
+      <div id="menüitems">
+        <div id="rhover">
+          <input type="text" placeholder="Link?" id="rinput" />
+          <input type="text" placeholder="Name?" id="rnameinput" />
+          <table id="routput">
+            <tbody id="readmarktbody"></tbody>
+          </table>
+        </div>
+        <div id="shover">
+          <input type="text" placeholder="Name?" id="snameinput" />
+          <input type="text" placeholder="Price?" id="spriceinput" />
+          <input type="text" placeholder="Link?" id="slinkinput" />
+          <table id="soutput">
+            <tbody id="shoppingtbody"></tbody>
+          </table>
+        </div>
+        <div id="thover">
+          <input type="text" placeholder="Todos?" id="tinput" />
+          <table id="toutput">
+            <tbody id="todostbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <button id="menübtn">
+      <img src="images//menünight.png" id="menübtnimg" />
+    </button>
+    <div id="startmainunset">
+      <div id="startunset">
+        <h1>Welcome</h1>
+        <h3 id="h3name">Your Name</h3>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="lists//todos.js"></script>
+    <script src="lists//Lesezeichen.js"></script>
+    <script src="lists//shoppinglist.js"></script>
+  </body>
+</html>

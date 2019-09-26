@@ -16,7 +16,7 @@ It is a practical and helpful Home Page for your Browser
 - Internet Explorer
 - Edge
 
-## Funktions
+## Functions
 
 - Lists
   - Todos

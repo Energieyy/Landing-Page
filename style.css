@@ -60,7 +60,18 @@ input {
   font-size: 100px;
   font-family: Verdana;
 }
-
+#btnT img {
+  width: 30px;
+  height: 30px;
+}
+#btnS img {
+  width: 30px;
+  height: 30px;
+}
+#btnR img {
+  width: 30px;
+  height: 30px;
+}
 #btnT {
   margin-top: 150px;
   width: 80px;
@@ -191,7 +202,7 @@ input {
 
 #menüitems input {
   border-radius: 0;
-  border-width: 3px;
+  border-width: 5px;
 }
 
 .inputnight::placeholder {

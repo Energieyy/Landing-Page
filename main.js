@@ -194,6 +194,17 @@ function iconday() {
 }
 
 //set Background
+
+let homeicon;
+
+let icontoday = new Date(),
+  iconhour = icontoday.getHours();
+if (iconhour < 20 && iconhour > 8) {
+  homeicon = false;
+} else {
+  homeicon = true;
+}
+
 function backgroundl() {
   // get Time
   let today = new Date(),
@@ -219,7 +230,10 @@ function backgroundl() {
     document.getElementById('rhover').classList.add('inputday');
     document.getElementById('rhover').classList.remove('inputnight');
     iconday();
-    document.getElementById('menübtnimg').src = 'images//menü.png';
+    if (homeicon == false) {
+      homeicon = true;
+      document.getElementById('menübtnimg').src = 'images//menü.png';
+    }
   } else {
     //night
     document.body.style.backgroundImage = "url('images/background.jpg')";
@@ -240,7 +254,10 @@ function backgroundl() {
     document.getElementById('rhover').classList.add('inputnight');
     document.getElementById('rhover').classList.remove('inputday');
     iconnight();
-    document.getElementById('menübtnimg').src = 'images//menünight.png';
+    if (homeicon == true) {
+      homeicon = false;
+      document.getElementById('menübtnimg').src = 'images//menünight.png';
+    }
   }
   setTimeout(backgroundl, 1000);
 }
@@ -278,6 +295,7 @@ function onmenüclick(e) {
     menüitems.classList.add('notdisplay');
     showmenü = true;
     document.getElementById('menü').style.background = 'none';
+    document.getElementById('menübtnimg').src = 'images//menünight.png';
   } else {
     e.preventDefault();
     menü.classList.add('notdisplay');
@@ -287,6 +305,7 @@ function onmenüclick(e) {
     btnR.classList.add('notdisplay');
     showmenü = false;
     document.getElementById('menü').style.background = 'none';
+    document.getElementById('menübtnimg').src = 'images//menü.png';
   }
 }
 

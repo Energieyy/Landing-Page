@@ -8,6 +8,9 @@ let swhilenum = 0;
 let shoppinglsf;
 let shopping = [];
 let shnum;
+const result = document.getElementById('calcresult');
+let resultcalc = 0;
+
 // array
 if (localStorage.getItem('shoppingls') === null) {
 } else {
@@ -19,11 +22,15 @@ if (localStorage.getItem('shoppingls') === null) {
 snameinput.addEventListener('keypress', soninput);
 spriceinput.addEventListener('keypress', soninput);
 slinkinput.addEventListener('keypress', soninput);
-// show local storage
 
+//show
+//result
+function showresultcalc() {
+  result.innerHTML = `${resultcalc}€`;
+}
+//table
 function showshopping() {
   while (shopping.length > swhilenum) {
-    //show
     shnum = shopping[swhilenum];
     const tr = soutput.insertRow();
     const cell1 = tr.insertCell(0);
@@ -35,6 +42,8 @@ function showshopping() {
     } else if (shnum.Link == '' && shnum.Price != '') {
       cell1.innerHTML = `${shnum.Name}|${shnum.Price}€`;
       cell2.innerHTML = `<button id='shoppingbtn ${swhilenum}'>remove</button>`;
+      const reshnum = parseFloat(shnum.Price);
+      resultcalc = resultcalc + reshnum;
     } else if (shnum.Link != '' && shnum.Price == '') {
       cell1.innerHTML = `${shnum.Name}`;
       const cell3 = tr.insertCell(2);
@@ -45,7 +54,10 @@ function showshopping() {
       const cell3 = tr.insertCell(2);
       cell2.innerHTML = `<a href='${shnum.Link}' target='_blank'><button>go to page</button></a>`;
       cell3.innerHTML = `<button id='shoppingbtn ${swhilenum}'>remove</button>`;
+      const reshnum = parseFloat(shnum.Price);
+      resultcalc = resultcalc + reshnum;
     }
+    //result
 
     //id
     cell1.id = 'textid';
@@ -55,6 +67,8 @@ function showshopping() {
     swhilenum++;
   }
   swhilenum = 0;
+  showresultcalc();
+  resultcalc = 0;
 }
 
 function deleteallshopping() {
@@ -68,13 +82,23 @@ function sondelete(e) {
   const shlghted = shopping.length;
   while (swhilenum < shlghted) {
     if (
-      `${shopping[swhilenum].Name}|${shopping[swhilenum].Price}€` !=
-      e.target.parentNode.parentNode.firstChild.textContent
+      e.target.parentNode.parentNode.firstChild.textContent.slice(-1) == '€'
     ) {
-      shoppingdelete.push(shopping[swhilenum]);
-      console.log(shopping[swhilenum].Name);
-      console.log(e.target.parentNode.parentNode.firstChild.textContent);
+      if (
+        `${shopping[swhilenum].Name}|${shopping[swhilenum].Price}€` !=
+        e.target.parentNode.parentNode.firstChild.textContent
+      ) {
+        shoppingdelete.push(shopping[swhilenum]);
+      }
+    } else {
+      if (
+        `${shopping[swhilenum].Name}` !=
+        e.target.parentNode.parentNode.firstChild.textContent
+      ) {
+        shoppingdelete.push(shopping[swhilenum]);
+      }
     }
+
     swhilenum++;
   }
   swhilenum = 0;
@@ -89,28 +113,45 @@ function sondelete(e) {
 function soninput(a) {
   if (a.which == 13 || a.keycode == 13) {
     if (snameinput.value !== '') {
-      if (slinkinput.value.slice(0, 5) === 'https') {
-        //add to array
-        shopping.push({
-          Name: `${snameinput.value}`,
-          Price: `${spriceinput.value}`,
-          Link: `${slinkinput.value}`
-        });
-        //add to local Storage
-        localStorage.setItem('shoppingls', JSON.stringify(shopping));
-        // input = null
-        snameinput.value = '';
-        slinkinput.value = '';
-        spriceinput.value = '';
-        //show
-        deleteallshopping();
-        showshopping();
+      if (slinkinput.value !== '') {
+        if (slinkinput.value.slice(0, 5) === 'https') {
+          //add to array
+          shopping.push({
+            Name: `${snameinput.value}`,
+            Price: `${spriceinput.value}`,
+            Link: `${slinkinput.value}`
+          });
+          //add to local Storage
+          localStorage.setItem('shoppingls', JSON.stringify(shopping));
+          // input = null
+          snameinput.value = '';
+          slinkinput.value = '';
+          spriceinput.value = '';
+          //show
+          deleteallshopping();
+          showshopping();
+        } else {
+          //add to array
+          shopping.push({
+            Name: `${snameinput.value}`,
+            Price: `${spriceinput.value}`,
+            Link: `https://${slinkinput.value}`
+          });
+          //add to local Storage
+          localStorage.setItem('shoppingls', JSON.stringify(shopping));
+          // input = null
+          snameinput.value = '';
+          slinkinput.value = '';
+          spriceinput.value = '';
+          //show
+          deleteallshopping();
+          showshopping();
+        }
       } else {
-        //add to array
         shopping.push({
           Name: `${snameinput.value}`,
           Price: `${spriceinput.value}`,
-          Link: `https://${slinkinput.value}`
+          Link: ``
         });
         //add to local Storage
         localStorage.setItem('shoppingls', JSON.stringify(shopping));
@@ -125,5 +166,6 @@ function soninput(a) {
     }
   }
 }
+
 // call functions
 showshopping();

@@ -154,11 +154,24 @@ function onwidthchange(a) {
     uhr.style.fontSize = '100px';
     zahlout.style.fontSize = '50px';
     document.getElementById('headline').style.fontSize = '50px';
+  }
+  setTimeout(onwidthchange, 1000);
+}
+function onheightchange() {
+  if (window.innerHeight < 490) {
+    btnR.style.marginTop = '50px';
+    btnS.style.marginTop = '50px';
+    btnT.style.marginTop = '65px';
+  } else if (window.innerHeight < 625 && window.innerHeight > 490) {
+    btnR.style.marginTop = '80px';
+    btnS.style.marginTop = '80px';
+    btnT.style.marginTop = '90px';
+  } else if (window.innerHeight > 625) {
     btnR.style.marginTop = '120px';
     btnS.style.marginTop = '120px';
     btnT.style.marginTop = '150px';
   }
-  setTimeout(onwidthchange, 1000);
+  setTimeout(onheightchange, 1000);
 }
 
 //Uhr
@@ -418,3 +431,4 @@ if (window.innerWidth > 530) {
 showTime();
 backgroundl();
 onwidthchange();
+onheightchange();

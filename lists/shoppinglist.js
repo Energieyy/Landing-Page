@@ -57,8 +57,6 @@ function showshopping() {
       const reshnum = parseFloat(shnum.Price);
       resultcalc = resultcalc + reshnum;
     }
-    //result
-
     //id
     cell1.id = 'textid';
     //look for click

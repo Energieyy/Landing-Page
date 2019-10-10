@@ -7,7 +7,6 @@ It is a practical and helpful Home Page for your Browser
 ### Work with:
 
 - Mozilla
-- Tor(if local Storage stay and not delete every Sesson)
 - Google Chrome
 - Opera
 

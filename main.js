@@ -318,7 +318,13 @@ function onmenüclick(e) {
     btnR.classList.add('notdisplay');
     showmenü = false;
     document.getElementById('menü').style.background = 'none';
-    document.getElementById('menübtnimg').src = 'images//menü.png';
+    let picontoday = new Date(),
+      piconhour = picontoday.getHours();
+    if (piconhour < 20 && piconhour > 8) {
+      document.getElementById('menübtnimg').src = 'images//menü.png';
+    } else {
+      document.getElementById('menübtnimg').src = 'images//menünight.png';
+    }
   }
 }
 

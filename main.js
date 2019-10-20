@@ -118,12 +118,8 @@ if (localStorage.getItem('namels') === null) {
   name.placeholder = `Your Name`;
 } else {
   name.placeholder = localStorage.getItem('namels');
-  nameh3add();
 }
-// name h3
-function nameh3add() {
-  nameh3.innerHTML = localStorage.getItem('namels');
-}
+
 //change placeholder by window change
 
 function onwidthchange(a) {
@@ -210,12 +206,25 @@ function iconday() {
 
 let homeicon;
 
-let icontoday = new Date(),
-  iconhour = icontoday.getHours();
-if (iconhour < 20 && iconhour > 8) {
-  homeicon = false;
-} else {
-  homeicon = true;
+function homeiconf() {
+  let itoday = new Date(),
+    ihour = itoday.getHours();
+  if (ihour < 20 && ihour > 8) {
+    homeicon = false;
+    document.getElementById('menübtnimg').src = 'images//menü.png';
+  } else {
+    homeicon = true;
+    document.getElementById('menübtnimg').src = 'images//menünight.png';
+  }
+}
+function homeicont() {
+  let itoday = new Date(),
+    ihour = itoday.getHours();
+  if (ihour < 20 && ihour > 8) {
+    document.getElementById('menübtnimg').src = 'images//menü.png';
+  } else {
+    document.getElementById('menübtnimg').src = 'images//menünight.png';
+  }
 }
 
 function backgroundl() {
@@ -236,16 +245,16 @@ function backgroundl() {
     document.getElementById('youtube').classList.add('inputday');
     document.getElementById('amazon').classList.remove('inputnight');
     document.getElementById('amazon').classList.add('inputday');
-    document.getElementById('thover').classList.add('inputday');
-    document.getElementById('thover').classList.remove('inputnight');
-    document.getElementById('shover').classList.add('inputday');
-    document.getElementById('shover').classList.remove('inputnight');
-    document.getElementById('rhover').classList.add('inputday');
-    document.getElementById('rhover').classList.remove('inputnight');
+    document.getElementById('tbody').classList.add('inputday');
+    document.getElementById('tbody').classList.remove('inputnight');
+    document.getElementById('sbody').classList.add('inputday');
+    document.getElementById('sbody').classList.remove('inputnight');
+    document.getElementById('rbody').classList.add('inputday');
+    document.getElementById('rbody').classList.remove('inputnight');
     iconday();
-    if (homeicon == false) {
-      homeicon = true;
+    if (homeicon === false) {
       document.getElementById('menübtnimg').src = 'images//menü.png';
+      homeicon = true;
     }
   } else {
     //night
@@ -260,16 +269,16 @@ function backgroundl() {
     document.getElementById('youtube').classList.add('inputnight');
     document.getElementById('amazon').classList.remove('inputday');
     document.getElementById('amazon').classList.add('inputnight');
-    document.getElementById('thover').classList.add('inputnight');
-    document.getElementById('thover').classList.remove('inputday');
-    document.getElementById('shover').classList.add('inputnight');
-    document.getElementById('shover').classList.remove('inputday');
-    document.getElementById('rhover').classList.add('inputnight');
-    document.getElementById('rhover').classList.remove('inputday');
+    document.getElementById('tbody').classList.add('inputnight');
+    document.getElementById('tbody').classList.remove('inputday');
+    document.getElementById('sbody').classList.add('inputnight');
+    document.getElementById('sbody').classList.remove('inputday');
+    document.getElementById('rbody').classList.add('inputnight');
+    document.getElementById('rbody').classList.remove('inputday');
     iconnight();
-    if (homeicon == true) {
-      homeicon = false;
+    if (homeicon === true) {
       document.getElementById('menübtnimg').src = 'images//menünight.png';
+      homeicon = false;
     }
   }
   setTimeout(backgroundl, 1000);
@@ -285,156 +294,93 @@ const menübtnlist = document.getElementById('menülistbtns');
 const btnS = document.getElementById('btnS');
 const btnT = document.getElementById('btnT');
 const btnR = document.getElementById('btnR');
-const readmarklist = document.getElementById('rhover');
-const shoppinglist = document.getElementById('shover');
-const todoslist = document.getElementById('thover');
+const readmarklist = document.getElementById('rbody');
+const shoppinglist = document.getElementById('sbody');
+const todoslist = document.getElementById('tbody');
+const listbtn = document.getElementById('listbtn');
+const mainmenübtns = document.getElementById('mainmenübtns');
+const settingbtn = document.getElementById('settingbtn');
+const listbackbtn = document.getElementById('back');
 
 let showmenü = false;
 //addeventlistener
 
+menübtn.addEventListener('click', onmenüclick);
+listbtn.addEventListener('click', omlistbtnclick);
+listbackbtn.addEventListener('click', onlistbackclick);
 btnS.addEventListener('click', onmenübtnSclick);
 btnT.addEventListener('click', onmenübtnTclick);
 btnR.addEventListener('click', onmenübtnRclick);
-menübtn.addEventListener('click', onmenüclick);
 
 function onmenüclick(e) {
-  if (showmenü === false) {
-    e.preventDefault();
-    menü.classList.remove('notdisplay');
-    menübtnlist.classList.remove('notdisplay');
-    btnS.classList.remove('notdisplay');
-    btnT.classList.remove('notdisplay');
-    btnR.classList.remove('notdisplay');
-    menüitems.classList.add('notdisplay');
+  if (showmenü == false) {
+    mainmenübtns.classList.remove('notdisplay');
+
     showmenü = true;
-    document.getElementById('menü').style.background = 'none';
     document.getElementById('menübtnimg').src = 'images//menünight.png';
+    document.getElementById('horizontalline').classList.remove('notdisplay');
   } else {
-    e.preventDefault();
     menü.classList.add('notdisplay');
+    mainmenübtns.classList.add('notdisplay');
     menübtnlist.classList.add('notdisplay');
-    btnS.classList.add('notdisplay');
-    btnT.classList.add('notdisplay');
-    btnR.classList.add('notdisplay');
+    readmarklist.classList.add('notdisplay');
+    todoslist.classList.add('notdisplay');
+    shoppinglist.classList.add('notdisplay');
+    menü.classList.add('notdisplay');
     showmenü = false;
-    document.getElementById('menü').style.background = 'none';
-    let picontoday = new Date(),
-      piconhour = picontoday.getHours();
-    if (piconhour < 20 && piconhour > 8) {
-      document.getElementById('menübtnimg').src = 'images//menü.png';
-    } else {
-      document.getElementById('menübtnimg').src = 'images//menünight.png';
-    }
+    listbackbtn.classList.add('notdisplay');
+    homeicont();
+    document.getElementById('horizontalline').classList.add('notdisplay');
   }
 }
 
+function omlistbtnclick(e) {
+  menübtnlist.classList.remove('notdisplay');
+  mainmenübtns.classList.add('notdisplay');
+  listbackbtn.classList.remove('notdisplay');
+}
+
+function onlistbackclick(e) {
+  menübtnlist.classList.add('notdisplay');
+  mainmenübtns.classList.remove('notdisplay');
+  menü.classList.add('notdisplay');
+  readmarklist.classList.add('notdisplay');
+  todoslist.classList.add('notdisplay');
+  shoppinglist.classList.add('notdisplay');
+  listbackbtn.classList.add('notdisplay');
+}
+
 function onmenübtnSclick(e) {
-  e.preventDefault();
   shoppinglist.classList.remove('notdisplay');
-  soutput.classList.remove('notdisplay');
-  snameinput.classList.remove('notdisplay');
-  slinkinput.classList.remove('notdisplay');
-  spriceinput.classList.remove('notdisplay');
-
-  readmarklist.classList.add('notdisplay');
-  routput.classList.add('notdisplay');
-  rinput.classList.add('notdisplay');
-  rnameinput.classList.add('notdisplay');
-
   todoslist.classList.add('notdisplay');
-  toutput.classList.add('notdisplay');
-  tinput.classList.add('notdisplay');
-
-  menüitems.classList.remove('notdisplay');
-  document.getElementById('menü').style.backgroundColor = 'black';
+  readmarklist.classList.add('notdisplay');
+  menü.classList.remove('notdisplay');
 }
-
 function onmenübtnTclick(e) {
-  e.preventDefault();
   todoslist.classList.remove('notdisplay');
-  toutput.classList.remove('notdisplay');
-  tinput.classList.remove('notdisplay');
-
+  shoppinglist.classList.add('notdisplay');
   readmarklist.classList.add('notdisplay');
-  routput.classList.add('notdisplay');
-  rinput.classList.add('notdisplay');
-  rnameinput.classList.add('notdisplay');
-
-  shoppinglist.classList.add('notdisplay');
-  soutput.classList.add('notdisplay');
-  snameinput.classList.add('notdisplay');
-  slinkinput.classList.add('notdisplay');
-  spriceinput.classList.add('notdisplay');
-
-  menüitems.classList.remove('notdisplay');
-  document.getElementById('menü').style.backgroundColor = 'black';
+  menü.classList.remove('notdisplay');
 }
-
 function onmenübtnRclick(e) {
-  e.preventDefault();
   readmarklist.classList.remove('notdisplay');
-  routput.classList.remove('notdisplay');
-  rinput.classList.remove('notdisplay');
-  rnameinput.classList.remove('notdisplay');
-
-  todoslist.classList.add('notdisplay');
-  toutput.classList.add('notdisplay');
-  tinput.classList.add('notdisplay');
-
   shoppinglist.classList.add('notdisplay');
-  soutput.classList.add('notdisplay');
-  snameinput.classList.add('notdisplay');
-  slinkinput.classList.add('notdisplay');
-  spriceinput.classList.add('notdisplay');
-
-  menüitems.classList.remove('notdisplay');
-  document.getElementById('menü').style.backgroundColor = 'black';
+  todoslist.classList.add('notdisplay');
+  menü.classList.remove('notdisplay');
 }
-
-readmarklist.classList.add('notdisplay');
-routput.classList.add('notdisplay');
-rinput.classList.add('notdisplay');
-rnameinput.classList.add('notdisplay');
-
-shoppinglist.classList.add('notdisplay');
-soutput.classList.add('notdisplay');
-snameinput.classList.add('notdisplay');
-slinkinput.classList.add('notdisplay');
-spriceinput.classList.add('notdisplay');
-
-todoslist.classList.add('notdisplay');
-toutput.classList.add('notdisplay');
-tinput.classList.add('notdisplay');
 
 menü.classList.add('notdisplay');
+mainmenübtns.classList.add('notdisplay');
 menübtnlist.classList.add('notdisplay');
-btnS.classList.add('notdisplay');
-btnT.classList.add('notdisplay');
-btnR.classList.add('notdisplay');
-
-//start animation
-
-const startmain = document.getElementById('startmainunset');
-const main = document.getElementById('startunset');
-
-function animationstart() {
-  setTimeout(function pageshowdelay() {
-    main.classList.add('notdisplay');
-    startmain.classList.add('notdisplay');
-  }, 4000);
-}
-
-if (window.innerWidth > 530) {
-  startmain.classList.add('startmain');
-  main.classList.add('start');
-  animationstart();
-} else {
-  main.classList.add('notdisplay');
-  startmain.classList.add('notdisplay');
-}
+readmarklist.classList.add('notdisplay');
+todoslist.classList.add('notdisplay');
+shoppinglist.classList.add('notdisplay');
+listbackbtn.classList.add('notdisplay');
+document.getElementById('horizontalline').classList.add('notdisplay');
 
 // run
 showTime();
+homeiconf();
 backgroundl();
 onwidthchange();
 onheightchange();

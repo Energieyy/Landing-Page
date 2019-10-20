@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
     <title>Home</title>
+    <!-- Energieyy/Torge Holtwick -->
     <link rel="shortcut icon" href="images/sun.png" id="icon" />
-    <link rel="stylesheet" href="animation.css" />
   </head>
   <body id="body">
     <div id="main">
@@ -38,59 +38,60 @@
       <h1 id="zahlout">You searched 0 things</h1>
       <h1 id="uhr">15:50:50</h1>
     </div>
-
+    <div id="mainmenübtns">
+      <button id="listbtn">Listen</button>
+      <br />
+      <button id="settingbtn">Settings</button>
+    </div>
+    <div id="menülistbtns">
+      <button id="btnT">
+        <img src="images//Todos.png" />
+        Todos?
+      </button>
+      <br />
+      <button id="btnS">
+        <img src="images//shopping.png" />
+        Things to buy?
+      </button>
+      <br />
+      <button id="btnR">
+        <img src="images//Books.png" />
+        Saved pages?
+      </button>
+    </div>
+    <hr id="horizontalline" />
     <div id="menü">
-      <div id="menülistbtns">
-        <button id="btnT">
-          <img src="images//Todos.png" />
-          Todos?
-        </button>
+      <div id="rbody">
+        <input type="text" placeholder="Link?" id="rinput" />
         <br />
-        <button id="btnS">
-          <img src="images//shopping.png" />
-          Things to buy?
-        </button>
-        <br />
-        <button id="btnR">
-          <img src="images//Books.png" />
-          Saved pages?
-        </button>
+        <input type="text" placeholder="Name?" id="rnameinput" />
+        <table id="routput">
+          <tbody id="readmarktbody"></tbody>
+        </table>
       </div>
-      <div id="menüitems">
-        <div id="rhover">
-          <input type="text" placeholder="Link?" id="rinput" />
-          <input type="text" placeholder="Name?" id="rnameinput" />
-          <table id="routput">
-            <tbody id="readmarktbody"></tbody>
-          </table>
-        </div>
-        <div id="shover">
-          <input type="text" placeholder="Name?" id="snameinput" />
-          <input type="number" placeholder="Price?" id="spriceinput" />
-          <input type="text" placeholder="Link?" id="slinkinput" />
-          <table id="soutput">
-            <tbody id="shoppingtbody"></tbody>
-          </table>
-          <hr id="calcline" />
-          <h3 id="calcresult">0€</h3>
-        </div>
-        <div id="thover">
-          <input type="text" placeholder="Todos?" id="tinput" />
-          <table id="toutput">
-            <tbody id="todostbody"></tbody>
-          </table>
-        </div>
+      <div id="sbody">
+        <input type="text" placeholder="Name?" id="snameinput" />
+        <br />
+        <input type="number" placeholder="Price?" id="spriceinput" />
+        <br />
+        <input type="text" placeholder="Link?" id="slinkinput" />
+        <table id="soutput">
+          <tbody id="shoppingtbody"></tbody>
+        </table>
+        <hr id="calcline" />
+        <h3 id="calcresult">0€</h3>
+      </div>
+      <div id="tbody">
+        <input type="text" placeholder="Todos?" id="tinput" />
+        <table id="toutput">
+          <tbody id="todostbody"></tbody>
+        </table>
       </div>
     </div>
+    <button id="back"><img src="images//back.png" alt="Back" /></button>
     <button id="menübtn">
       <img src="images//menünight.png" id="menübtnimg" />
     </button>
-    <div id="startmainunset">
-      <div id="startunset">
-        <h1>Welcome</h1>
-        <h3 id="h3name">Your Name</h3>
-      </div>
-    </div>
     <script src="main.js"></script>
     <script src="lists//todos.js"></script>
     <script src="lists//Readmarks.js"></script>

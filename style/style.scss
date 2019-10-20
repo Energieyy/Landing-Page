@@ -1,0 +1,217 @@
+// mixins
+@mixin mainhomereturn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: none;
+  z-index: 3;
+  left: 30px;
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@mixin listsbody {
+  background: none;
+  font-size: 150%;
+  text-align: center;
+  background: none;
+  color: white;
+  position: relative;
+  top: 0;
+  width: auto;
+  height: auto;
+  background-color: black;
+  table {
+    margin: auto;
+  }
+  input {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border-color: black;
+    border-width: 5px;
+    width: 60%;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@mixin mainmenübtns {
+  margin-top: 150px;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-width: 3px;
+  border-radius: 30%;
+  border-color: white;
+  color: white;
+  font-size: 100%;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@mixin mainmenü {
+  background-color: black;
+  position: fixed;
+
+  top: 0%;
+  left: 0%;
+  width: 30%;
+  height: 100%;
+  z-index: 3;
+  opacity: 0.8;
+}
+
+@mixin normalinput() {
+  width: 50%;
+  height: 100%;
+  font-size: 30px;
+  border-radius: 20px;
+  margin-top: 30px;
+  border-color: rgb(95, 94, 94);
+  border-width: 3px;
+  text-align: center;
+}
+
+body {
+  text-align: center;
+  background-image: url('images/background.jpg');
+  font-family: Verdana;
+}
+::placeholder {
+  opacity: 1;
+}
+h1 {
+  font-size: 50px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 30px;
+}
+
+h3 {
+  margin-top: 3px;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#uhr {
+  font-size: 100px;
+  font-family: Verdana;
+}
+#name {
+  margin: 0%;
+  width: auto;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+}
+#name::placeholder {
+  text-align: center;
+  opacity: 1;
+}
+#horizontalline {
+  position: fixed;
+  width: 1px;
+  height: 100%;
+  top: -10px;
+  padding: 0;
+  left: 30%;
+  background-color: white;
+  border: none;
+  color: white;
+  z-index: 3;
+}
+
+#menü {
+  position: absolute;
+  top: 0px;
+  left: 30%;
+  width: 70%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 2;
+  background: black;
+}
+#mainmenübtns {
+  @include mainmenü();
+}
+
+#menülistbtns {
+  @include mainmenü();
+}
+
+#menübtn {
+  @include mainhomereturn();
+  top: 30px;
+}
+#back {
+  @include mainhomereturn();
+  top: 90px;
+}
+
+#ecosia {
+  @include normalinput();
+}
+#youtube {
+  @include normalinput();
+}
+#amazon {
+  @include normalinput();
+}
+#settingbtn {
+  @include mainmenübtns();
+}
+#listbtn {
+  @include mainmenübtns();
+}
+#btnR {
+  @include mainmenübtns();
+}
+#btnS {
+  @include mainmenübtns();
+}
+#btnT {
+  @include mainmenübtns();
+}
+#tbody {
+  @include listsbody();
+}
+#sbody {
+  @include listsbody();
+}
+#rbody {
+  @include listsbody();
+}
+.notdisplay {
+  display: none;
+}
+.inputnight::placeholder {
+  color: white;
+}
+.inputday::placeholder {
+  color: black;
+}
+.inputnight {
+  background-color: black;
+  border-color: white;
+  color: white;
+  input {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+}
+.inputday {
+  background-color: white;
+  border-color: black;
+  color: black;
+  input {
+    background-color: white;
+    color: black;
+    border-color: black;
+  }
+}

@@ -1,0 +1,409 @@
+@charset "UTF-8";
+body {
+  text-align: center;
+  background-image: url("images/background.jpg");
+  font-family: Verdana;
+}
+
+::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  opacity: 1;
+}
+
+::placeholder {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 30px;
+}
+
+h3 {
+  margin-top: 3px;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#uhr {
+  font-size: 100px;
+  font-family: Verdana;
+}
+
+#name {
+  margin: 0%;
+  width: auto;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+}
+
+#name::-webkit-input-placeholder {
+  text-align: center;
+  opacity: 1;
+}
+
+#name:-ms-input-placeholder {
+  text-align: center;
+  opacity: 1;
+}
+
+#name::-ms-input-placeholder {
+  text-align: center;
+  opacity: 1;
+}
+
+#name::placeholder {
+  text-align: center;
+  opacity: 1;
+}
+
+#horizontalline {
+  position: fixed;
+  width: 1px;
+  height: 100%;
+  top: -10px;
+  padding: 0;
+  left: 30%;
+  background-color: white;
+  border: none;
+  color: white;
+  z-index: 3;
+}
+
+#menü {
+  position: absolute;
+  top: 0px;
+  left: 30%;
+  width: 70%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 2;
+  background: black;
+}
+
+#mainmenübtns {
+  background-color: black;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 30%;
+  height: 100%;
+  z-index: 3;
+  opacity: 0.8;
+}
+
+#menülistbtns {
+  background-color: black;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 30%;
+  height: 100%;
+  z-index: 3;
+  opacity: 0.8;
+}
+
+#menübtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: none;
+  z-index: 3;
+  left: 30px;
+  top: 30px;
+}
+
+#menübtn img {
+  width: 50px;
+  height: 50px;
+}
+
+#back {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: none;
+  z-index: 3;
+  left: 30px;
+  top: 90px;
+}
+
+#back img {
+  width: 50px;
+  height: 50px;
+}
+
+#ecosia {
+  width: 50%;
+  height: 100%;
+  font-size: 30px;
+  border-radius: 20px;
+  margin-top: 30px;
+  border-color: #5f5e5e;
+  border-width: 3px;
+  text-align: center;
+}
+
+#youtube {
+  width: 50%;
+  height: 100%;
+  font-size: 30px;
+  border-radius: 20px;
+  margin-top: 30px;
+  border-color: #5f5e5e;
+  border-width: 3px;
+  text-align: center;
+}
+
+#amazon {
+  width: 50%;
+  height: 100%;
+  font-size: 30px;
+  border-radius: 20px;
+  margin-top: 30px;
+  border-color: #5f5e5e;
+  border-width: 3px;
+  text-align: center;
+}
+
+#settingbtn {
+  margin-top: 150px;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-width: 3px;
+  border-radius: 30%;
+  border-color: white;
+  color: white;
+  font-size: 100%;
+}
+
+#settingbtn img {
+  width: 30px;
+  height: 30px;
+}
+
+#listbtn {
+  margin-top: 150px;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-width: 3px;
+  border-radius: 30%;
+  border-color: white;
+  color: white;
+  font-size: 100%;
+}
+
+#listbtn img {
+  width: 30px;
+  height: 30px;
+}
+
+#btnR {
+  margin-top: 150px;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-width: 3px;
+  border-radius: 30%;
+  border-color: white;
+  color: white;
+  font-size: 100%;
+}
+
+#btnR img {
+  width: 30px;
+  height: 30px;
+}
+
+#btnS {
+  margin-top: 150px;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-width: 3px;
+  border-radius: 30%;
+  border-color: white;
+  color: white;
+  font-size: 100%;
+}
+
+#btnS img {
+  width: 30px;
+  height: 30px;
+}
+
+#btnT {
+  margin-top: 150px;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-width: 3px;
+  border-radius: 30%;
+  border-color: white;
+  color: white;
+  font-size: 100%;
+}
+
+#btnT img {
+  width: 30px;
+  height: 30px;
+}
+
+#tbody {
+  background: none;
+  font-size: 150%;
+  text-align: center;
+  background: none;
+  color: white;
+  position: relative;
+  top: 0;
+  width: auto;
+  height: auto;
+  background-color: black;
+}
+
+#tbody table {
+  margin: auto;
+}
+
+#tbody input {
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  border-color: black;
+  border-width: 5px;
+  width: 60%;
+  font-size: 20px;
+  text-align: center;
+}
+
+#sbody {
+  background: none;
+  font-size: 150%;
+  text-align: center;
+  background: none;
+  color: white;
+  position: relative;
+  top: 0;
+  width: auto;
+  height: auto;
+  background-color: black;
+}
+
+#sbody table {
+  margin: auto;
+}
+
+#sbody input {
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  border-color: black;
+  border-width: 5px;
+  width: 60%;
+  font-size: 20px;
+  text-align: center;
+}
+
+#rbody {
+  background: none;
+  font-size: 150%;
+  text-align: center;
+  background: none;
+  color: white;
+  position: relative;
+  top: 0;
+  width: auto;
+  height: auto;
+  background-color: black;
+}
+
+#rbody table {
+  margin: auto;
+}
+
+#rbody input {
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  border-color: black;
+  border-width: 5px;
+  width: 60%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.notdisplay {
+  display: none;
+}
+
+.inputnight::-webkit-input-placeholder {
+  color: white;
+}
+
+.inputnight:-ms-input-placeholder {
+  color: white;
+}
+
+.inputnight::-ms-input-placeholder {
+  color: white;
+}
+
+.inputnight::placeholder {
+  color: white;
+}
+
+.inputday::-webkit-input-placeholder {
+  color: black;
+}
+
+.inputday:-ms-input-placeholder {
+  color: black;
+}
+
+.inputday::-ms-input-placeholder {
+  color: black;
+}
+
+.inputday::placeholder {
+  color: black;
+}
+
+.inputnight {
+  background-color: black;
+  border-color: white;
+  color: white;
+}
+
+.inputnight input {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.inputday {
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
+.inputday input {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+/*# sourceMappingURL=style.css.map */

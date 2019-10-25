@@ -315,11 +315,13 @@ btnR.addEventListener('click', onmenübtnRclick);
 function onmenüclick(e) {
   if (showmenü == false) {
     mainmenübtns.classList.remove('notdisplay');
-
+    document.querySelector('.menübtnbgc').classList.remove('notdisplay');
     showmenü = true;
     document.getElementById('menübtnimg').src = 'images//menünight.png';
     document.getElementById('horizontalline').classList.remove('notdisplay');
   } else {
+    document.querySelector('.menümainbgc').classList.add('notdisplay');
+    document.querySelector('.menübtnbgc').classList.add('notdisplay');
     menü.classList.add('notdisplay');
     mainmenübtns.classList.add('notdisplay');
     menübtnlist.classList.add('notdisplay');
@@ -348,6 +350,7 @@ function onlistbackclick(e) {
   todoslist.classList.add('notdisplay');
   shoppinglist.classList.add('notdisplay');
   listbackbtn.classList.add('notdisplay');
+  document.querySelector('.menümainbgc').classList.add('notdisplay');
 }
 
 function onmenübtnSclick(e) {
@@ -355,18 +358,21 @@ function onmenübtnSclick(e) {
   todoslist.classList.add('notdisplay');
   readmarklist.classList.add('notdisplay');
   menü.classList.remove('notdisplay');
+  document.querySelector('.menümainbgc').classList.remove('notdisplay');
 }
 function onmenübtnTclick(e) {
   todoslist.classList.remove('notdisplay');
   shoppinglist.classList.add('notdisplay');
   readmarklist.classList.add('notdisplay');
   menü.classList.remove('notdisplay');
+  document.querySelector('.menümainbgc').classList.remove('notdisplay');
 }
 function onmenübtnRclick(e) {
   readmarklist.classList.remove('notdisplay');
   shoppinglist.classList.add('notdisplay');
   todoslist.classList.add('notdisplay');
   menü.classList.remove('notdisplay');
+  document.querySelector('.menümainbgc').classList.remove('notdisplay');
 }
 
 menü.classList.add('notdisplay');
@@ -377,6 +383,8 @@ todoslist.classList.add('notdisplay');
 shoppinglist.classList.add('notdisplay');
 listbackbtn.classList.add('notdisplay');
 document.getElementById('horizontalline').classList.add('notdisplay');
+document.querySelector('.menümainbgc').classList.add('notdisplay');
+document.querySelector('.menübtnbgc').classList.add('notdisplay');
 
 // run
 showTime();

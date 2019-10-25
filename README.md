@@ -4,7 +4,7 @@ It is a practical and helpful Home Page for your Browser
 
 ## compatibility
 
-### Work with:
+### Work with
 
 - Mozilla
 - Google Chrome
@@ -47,6 +47,7 @@ It is a practical and helpful Home Page for your Browser
 ## How to add things to the Lists
 
 - Click on the homebutton
+- Click on Lists
 - Choose your list
 - Click on the button
 - Click on the input field

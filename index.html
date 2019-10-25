@@ -39,7 +39,7 @@
       <h1 id="uhr">15:50:50</h1>
     </div>
     <div id="mainmenübtns">
-      <button id="listbtn">Listen</button>
+      <button id="listbtn">Lists</button>
       <br />
       <button id="settingbtn">Settings</button>
     </div>
@@ -60,21 +60,45 @@
       </button>
     </div>
     <hr id="horizontalline" />
+    <div class="menübtnbgc"></div>
+    <div class="menümainbgc"></div>
     <div id="menü">
       <div id="rbody">
-        <input type="text" placeholder="Link?" id="rinput" />
-        <br />
-        <input type="text" placeholder="Name?" id="rnameinput" />
+        <div class="rinput">
+          <input type="text" name="LinkR" required id="rinput" />
+          <label for="LinkR" class="label-LinkR">
+            <span class="content-LinkR">Link</span>
+          </label>
+        </div>
+        <div class="rnameinput">
+          <input type="text" name="NameR" required id="rnameinput" />
+          <label for="NameR" class="label-NameR">
+            <span class="content-NameR">Name</span>
+          </label>
+        </div>
         <table id="routput">
           <tbody id="readmarktbody"></tbody>
         </table>
       </div>
       <div id="sbody">
-        <input type="text" placeholder="Name?" id="snameinput" />
-        <br />
-        <input type="number" placeholder="Price?" id="spriceinput" />
-        <br />
-        <input type="text" placeholder="Link?" id="slinkinput" />
+        <div class="snameinput">
+          <input type="text" name="NameS" required id="snameinput" />
+          <label for="NameS" class="label-NameS">
+            <span class="content-NameS">Name</span>
+          </label>
+        </div>
+        <div class="spriceinput">
+          <input type="number" name="Price" required id="spriceinput" />
+          <label for="Price" class="label-Price">
+            <span class="content-Price">Price</span>
+          </label>
+        </div>
+        <div class="slinkinput">
+          <input type="text" name="LinkS" required id="slinkinput" />
+          <label for="LinkS" class="label-LinkS">
+            <span class="content-LinkS">Link</span>
+          </label>
+        </div>
         <table id="soutput">
           <tbody id="shoppingtbody"></tbody>
         </table>
@@ -82,7 +106,12 @@
         <h3 id="calcresult">0€</h3>
       </div>
       <div id="tbody">
-        <input type="text" placeholder="Todos?" id="tinput" />
+        <div class="tinput">
+          <input type="text" name="Todos" required id="tinput" />
+          <label for="Todos" class="label-Todos">
+            <span class="content-Todos">Todos</span>
+          </label>
+        </div>
         <table id="toutput">
           <tbody id="todostbody"></tbody>
         </table>

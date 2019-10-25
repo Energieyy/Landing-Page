@@ -45,6 +45,7 @@ h3 {
   font-size: 30px;
   background: transparent;
   border: none;
+  text-align: center;
 }
 
 #name::-webkit-input-placeholder {
@@ -86,31 +87,28 @@ h3 {
   left: 30%;
   width: 70%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 1;
   z-index: 2;
-  background: black;
 }
 
 #mainmenübtns {
-  background-color: black;
   position: fixed;
   top: 0%;
   left: 0%;
   width: 30%;
   height: 100%;
   z-index: 3;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 #menülistbtns {
-  background-color: black;
   position: fixed;
   top: 0%;
   left: 0%;
   width: 30%;
   height: 100%;
   z-index: 3;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 #menübtn {
@@ -182,7 +180,7 @@ h3 {
   margin-top: 150px;
   width: 80px;
   height: 80px;
-  background-color: black;
+  background-color: transparent;
   border-width: 3px;
   border-radius: 30%;
   border-color: white;
@@ -199,7 +197,7 @@ h3 {
   margin-top: 150px;
   width: 80px;
   height: 80px;
-  background-color: black;
+  background-color: transparent;
   border-width: 3px;
   border-radius: 30%;
   border-color: white;
@@ -216,7 +214,7 @@ h3 {
   margin-top: 150px;
   width: 80px;
   height: 80px;
-  background-color: black;
+  background-color: transparent;
   border-width: 3px;
   border-radius: 30%;
   border-color: white;
@@ -233,7 +231,7 @@ h3 {
   margin-top: 150px;
   width: 80px;
   height: 80px;
-  background-color: black;
+  background-color: transparent;
   border-width: 3px;
   border-radius: 30%;
   border-color: white;
@@ -250,7 +248,7 @@ h3 {
   margin-top: 150px;
   width: 80px;
   height: 80px;
-  background-color: black;
+  background-color: transparent;
   border-width: 3px;
   border-radius: 30%;
   border-color: white;
@@ -269,26 +267,15 @@ h3 {
   text-align: center;
   background: none;
   color: white;
-  position: relative;
+  position: absolute;
+  left: 0;
   top: 0;
-  width: auto;
+  width: 100%;
   height: auto;
-  background-color: black;
 }
 
 #tbody table {
   margin: auto;
-}
-
-#tbody input {
-  margin-top: 10px;
-  background-color: black;
-  color: white;
-  border-color: black;
-  border-width: 5px;
-  width: 60%;
-  font-size: 20px;
-  text-align: center;
 }
 
 #sbody {
@@ -297,26 +284,15 @@ h3 {
   text-align: center;
   background: none;
   color: white;
-  position: relative;
+  position: absolute;
+  left: 0;
   top: 0;
-  width: auto;
+  width: 100%;
   height: auto;
-  background-color: black;
 }
 
 #sbody table {
   margin: auto;
-}
-
-#sbody input {
-  margin-top: 10px;
-  background-color: black;
-  color: white;
-  border-color: black;
-  border-width: 5px;
-  width: 60%;
-  font-size: 20px;
-  text-align: center;
 }
 
 #rbody {
@@ -325,26 +301,15 @@ h3 {
   text-align: center;
   background: none;
   color: white;
-  position: relative;
+  position: absolute;
+  left: 0;
   top: 0;
-  width: auto;
+  width: 100%;
   height: auto;
-  background-color: black;
 }
 
 #rbody table {
   margin: auto;
-}
-
-#rbody input {
-  margin-top: 10px;
-  background-color: black;
-  color: white;
-  border-color: black;
-  border-width: 5px;
-  width: 60%;
-  font-size: 20px;
-  text-align: center;
 }
 
 .notdisplay {
@@ -405,5 +370,458 @@ h3 {
   background-color: white;
   color: black;
   border-color: black;
+}
+
+.bodybgd {
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+.menümainbgc {
+  background-color: black;
+  width: 70%;
+  height: 100%;
+  left: 30%;
+  top: 0px;
+  z-index: 2;
+  position: fixed;
+  opacity: 0.8;
+}
+
+.menübtnbgc {
+  background-color: black;
+  width: 30%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  position: fixed;
+  opacity: 0.8;
+}
+
+.rinput {
+  margin-top: 30px;
+  width: 90%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.rinput input {
+  width: 100%;
+  height: 100%;
+  color: #747474;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.rinput label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.rinput label span {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.rinput label::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #747474;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.rinput input:focus + label span,
+.rinput input:valid + label span {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  font-size: 14px;
+  color: #747474;
+}
+
+.rinput input:focus + label::after,
+.rinput input:valid + label::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.rnameinput {
+  margin-top: 30px;
+  width: 90%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.rnameinput input {
+  width: 100%;
+  height: 100%;
+  color: #747474;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.rnameinput label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.rnameinput label span {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.rnameinput label::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #747474;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.rnameinput input:focus + label span,
+.rnameinput input:valid + label span {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  font-size: 14px;
+  color: #747474;
+}
+
+.rnameinput input:focus + label::after,
+.rnameinput input:valid + label::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.snameinput {
+  margin-top: 30px;
+  width: 90%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.snameinput input {
+  width: 100%;
+  height: 100%;
+  color: #747474;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.snameinput label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.snameinput label span {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.snameinput label::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #747474;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.snameinput input:focus + label span,
+.snameinput input:valid + label span {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  font-size: 14px;
+  color: #747474;
+}
+
+.snameinput input:focus + label::after,
+.snameinput input:valid + label::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.spriceinput {
+  margin-top: 30px;
+  width: 90%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.spriceinput input {
+  width: 100%;
+  height: 100%;
+  color: #747474;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.spriceinput label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.spriceinput label span {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.spriceinput label::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #747474;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.spriceinput input:focus + label span,
+.spriceinput input:valid + label span {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  font-size: 14px;
+  color: #747474;
+}
+
+.spriceinput input:focus + label::after,
+.spriceinput input:valid + label::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.slinkinput {
+  margin-top: 30px;
+  width: 90%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.slinkinput input {
+  width: 100%;
+  height: 100%;
+  color: #747474;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.slinkinput label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.slinkinput label span {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.slinkinput label::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #747474;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.slinkinput input:focus + label span,
+.slinkinput input:valid + label span {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  font-size: 14px;
+  color: #747474;
+}
+
+.slinkinput input:focus + label::after,
+.slinkinput input:valid + label::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.tinput {
+  margin-top: 30px;
+  width: 90%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.tinput input {
+  width: 100%;
+  height: 100%;
+  color: #747474;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.tinput label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.tinput label span {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tinput label::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #747474;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.tinput input:focus + label span,
+.tinput input:valid + label span {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  font-size: 14px;
+  color: #747474;
+}
+
+.tinput input:focus + label::after,
+.tinput input:valid + label::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 /*# sourceMappingURL=style.css.map */

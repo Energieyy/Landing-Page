@@ -106,7 +106,6 @@ function onkeypressname(a) {
       //placeholder
       name.placeholder = localStorage.getItem('namels');
       name.blur();
-      nameh3add();
     }
   }
 }
